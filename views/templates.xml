@@ -1,0 +1,283 @@
+<odoo>
+    <data>
+        <!-- Portal Registration form Template-->
+        <template id="portal_registration_form">
+            <t t-call="portal.portal_layout">
+                <t t-set="additional_title">Registration Form</t>
+                <div class="oe_structure"/>
+                <form action="/create/portal_user" class="row" method="post">
+                    <div class="oe_structure"/>
+                    <div class="container mb64">
+                        <section class="s_faq_collapse pt32 pb32 o_colored_level">
+                            <div id="myCollapse" class="accordion" role="tablist">
+                                <div class="card bg-white" data-name="Item">
+                                    <a
+                                        href="#"
+                                        role="tab"
+                                        data-toggle="collapse"
+                                        aria-expanded="true"
+                                        class="card-header"
+                                        data-parent="#myCollapse"
+                                        data-target="#basic"
+                                        data-original-title=""
+                                        title=""
+                                        aria-describedby="tooltip551987"
+                                    >
+                                        Registration
+                                        Form
+                                    </a>
+                                    <div class="collapse show" role="tabpanel">
+                                        <div class="card-body row">
+                                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                            <div t-attf-class="form-group  col-xl-6">
+                                                <label class="col-form-label" for="name">Name</label>
+                                                <input
+                                                    type="text"
+                                                    name="name"
+                                                    t-attf-class="form-control"
+                                                    required="1"
+                                                    t-att-value="name"
+                                                />
+                                            </div>
+                                            <div t-attf-class="form-group  col-xl-6">
+                                                <label class="col-form-label" for="submission_date">
+                                                    Submission
+                                                    Date
+                                                </label>
+                                                <input
+                                                    type="Date"
+                                                    name="submission_date"
+                                                    t-attf-class="form-control"
+                                                    required="1"
+                                                    readonly="1"
+                                                    t-att-value="submission_date"
+                                                />
+                                            </div>
+                                            <div t-attf-class="form-group  col-xl-4">
+                                                <label class="col-form-label" for="company">Company Name</label>
+                                                <input
+                                                    type="text"
+                                                    name="company"
+                                                    t-attf-class="form-control"
+                                                    required="1"
+                                                    t-att-value="company"
+                                                />
+                                            </div>
+                                            <div t-attf-class="form-group  col-xl-4">
+                                                <label class="col-form-label" for="department">Department</label>
+                                                <input
+                                                    type="text"
+                                                    name="department"
+                                                    t-attf-class="form-control"
+                                                    required="1"
+                                                    t-att-value="department"
+                                                />
+                                            </div>
+                                            <div t-attf-class="form-group  col-xl-4">
+                                                <label class="col-form-label" for="function">Function</label>
+                                                <input
+                                                    type="text"
+                                                    name="function"
+                                                    t-attf-class="form-control"
+                                                    required="1"
+                                                    t-att-value="function"
+                                                />
+                                            </div>
+                                            <div t-attf-class="form-group  col-xl-4">
+                                                <label class="col-form-label" for="name">First name</label>
+                                                <input
+                                                    type="text"
+                                                    name="first_name"
+                                                    t-attf-class="form-control"
+                                                    required="1"
+                                                    t-att-value="first_name"
+                                                />
+                                            </div>
+                                            <div t-attf-class="form-group  col-xl-4">
+                                                <label class="col-form-label" for="infix">Infix</label>
+                                                <input
+                                                    type="text"
+                                                    name="infix"
+                                                    t-attf-class="form-control"
+                                                    required="1"
+                                                    t-att-value="infix"
+                                                />
+                                            </div>
+                                            <div t-attf-class="form-group  col-xl-4">
+                                                <label class="col-form-label" for="last_name">Last name</label>
+                                                <input
+                                                    type="text"
+                                                    name="last_name"
+                                                    t-attf-class="form-control"
+                                                    required="1"
+                                                    t-att-value="last_name"
+                                                />
+                                            </div>
+                                            <div t-attf-class="form-group  col-xl-6">
+                                                <label class="col-form-label" for="name">Identity number</label>
+                                                <input
+                                                    type="text"
+                                                    name="id_number"
+                                                    t-attf-class="form-control"
+                                                    required="1"
+                                                    t-att-value="id_number"
+                                                />
+                                            </div>
+                                            <div t-attf-class="form-group  col-xl-6">
+                                                <label class="col-form-label" for="work_permit">
+                                                    Work
+                                                    permit/purchase/contract number
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    name="work_permit"
+                                                    t-attf-class="form-control"
+                                                    t-att-value="work_permit"
+                                                />
+                                            </div>
+                                            <div t-attf-class="form-group  col-xl-6">
+                                                <label class="col-form-label" for="name">Email</label>
+                                                <input
+                                                    type="email"
+                                                    name="email"
+                                                    t-attf-class="form-control"
+                                                    required="1"
+                                                    t-att-value="email"
+                                                />
+                                            </div>
+                                            <div t-attf-class="form-group  col-xl-6">
+                                                <label class="col-form-label" for="mobile">Mobile Number</label>
+                                                <input
+                                                    type="text"
+                                                    name="mobile"
+                                                    t-attf-class="form-control"
+                                                    required="1"
+                                                    t-att-value="mobile"
+                                                />
+                                            </div>
+                                            <div t-attf-class="form-group  col-xl-4">
+                                                <label class="col-form-label" for="street">
+                                                    Street name and house
+                                                    number
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    name="street"
+                                                    t-attf-class="form-control"
+                                                    required="1"
+                                                    t-att-value="street"
+                                                />
+                                            </div>
+                                            <div t-attf-class="form-group  col-xl-4">
+                                                <label class="col-form-label" for="postal_code">Postal Code</label>
+                                                <input
+                                                    type="text"
+                                                    name="postal_code"
+                                                    t-attf-class="form-control"
+                                                    required="1"
+                                                    t-att-value="postal_code"
+                                                />
+                                            </div>
+                                            <div t-attf-class="form-group  col-xl-4">
+                                                <label class="col-form-label" for="place_name">Place Name</label>
+                                                <input
+                                                    type="text"
+                                                    name="place_name"
+                                                    t-attf-class="form-control"
+                                                    required="1"
+                                                    t-att-value="place_name"
+                                                />
+                                            </div>
+                                            <div t-attf-class="form-group  col-xl-6">
+                                                <label class="col-form-label" for="name">Date of birth</label>
+                                                <input
+                                                    type="Date"
+                                                    name="date_of_birth"
+                                                    t-attf-class="form-control"
+                                                    required="1"
+                                                    t-att-value="date_of_birth"
+                                                />
+                                            </div>
+                                            <div t-attf-class="form-group  col-xl-6">
+                                                <label class="col-form-label" for="client">Client</label>
+                                                <input
+                                                    type="text"
+                                                    name="client"
+                                                    t-attf-class="form-control"
+                                                    required="1"
+                                                    t-att-value="client"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary  ">Submit</button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                </form>
+            </t>
+        </template>
+
+        <!-- Undefined Person Template-->
+        <template id="portal_undefined_person">
+            <t t-call="portal.portal_layout">
+                <t t-set="additional_title">Undefined Person</t>
+                <div class="oe_structure"/>
+                <form action="/registration_form" class="row" method="post">
+                    <div class="oe_structure"/>
+                    <div class="container mb64">
+                        <section class="s_faq_collapse pt32 pb32 o_colored_level">
+                            <div id="myCollapse" class="accordion" role="tablist">
+                                <div class="card bg-white" data-name="Item">
+                                    <div class="collapse show" role="tabpanel">
+                                        <div class="card-body row">
+                                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                            Error :
+                                            <t t-esc="error"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </form>
+            </t>
+        </template>
+
+        <!-- Registration form success Template-->
+        <template id="portal_registration_succeeded">
+            <t t-call="portal.portal_layout">
+                <t t-set="additional_title">Registration Succeeded</t>
+                <div class="oe_structure"/>
+                <form class="row">
+                    <div class="oe_structure"/>
+                    <div class="container mb64">
+                        <section class="s_faq_collapse pt32 pb32 o_colored_level">
+                            <div id="myCollapse" class="accordion" role="tablist">
+                                <div class="card bg-white" data-name="Item">
+                                    <div class="collapse show" role="tabpanel">
+                                        <div
+                                            class="card-body row alert alert-success text-center"
+                                            style="display: flex; justify-content: center;"
+                                        >
+                                            <div class="alert alert-success text-center">
+                                                <strong>
+                                                    An invitation email containing the password reset link has been
+                                                    to you
+                                                </strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </form>
+            </t>
+        </template>
+    </data>
+</odoo>
